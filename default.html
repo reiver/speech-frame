@@ -51,6 +51,20 @@
 		</p>
 	</section>
 	<section>
+		<h1>Trade-Offs</h1>
+		<p>
+			There is a trade-off between having long <strong>speech frame</strong> (40<abbr title="milliseconds">ms</abbr> to 60<abbr title="milliseconds">ms</abbr>) versus shorter <strong>speech frame</strong> (5<abbr title="milliseconds">ms</abbr> to 10<abbr title="milliseconds">ms</abbr>).
+		</p>
+		<p>
+			<em>Longer</em> <strong>speech frames</strong> are better for compression, but introduces algorithmic delay
+			—
+			the encoder wuld have to wait for, for example, 60<abbr title="milliseconds">ms</abbr> of audio to go by before it can even begin to encode the first (audio) pixel of data.
+		</p>
+		<p>
+			<em>Shorter</em> <strong>speech frames</strong> have amazingly ultra-low latency, but are terrible for compression (because the encoder has to constantly rewrite header data, and cannot find long-term audio patterns).
+		</p>
+	</section>
+	<section>
 		<h1>See Also</h1>
 		<ul>
 			<li>
